@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Music Instruments</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Discover Global Sounds</p>
+      <h1>Music Instruments Around the World</h1>
+      <p>
+        Explore instruments by category and type, learn their history,
+        and enjoy fun facts from different cultures.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Instrument filters">
+      <div class="control-group">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="typeFilter">Instrument type</label>
+        <select id="typeFilter">
+          <option value="all">All types</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <p id="resultCount" class="result-count" aria-live="polite"></p>
+      <div id="instrumentGrid" class="instrument-grid"></div>
+    </section>
+  </main>
+
+  <template id="instrumentCardTemplate">
+    <article class="card">
+      <h2 class="card__name"></h2>
+      <p class="card__meta"></p>
+      <p class="card__description"></p>
+
+      <h3>Little History</h3>
+      <p class="card__history"></p>
+
+      <h3>Fun Fact</h3>
+      <p class="card__fun-fact"></p>
+    </article>
+  </template>
+
+  <footer class="footer">
+    <p>Celebrating musical heritage from every corner of the world.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
